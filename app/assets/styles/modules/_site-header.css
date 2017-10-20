@@ -1,0 +1,43 @@
+.site-header{
+
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	padding: 1rem 0;
+
+	@mixin atMedium{
+		padding: 5.625rem 0;
+		padding: 1rem 0;
+	}
+
+	&__logo{
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%) scale(.5);
+		transform-origin: top;
+		/*
+		left: 50%;
+		transform: translateX(-50%) scale(.5);*/
+
+		@mixin atMedium{
+		left: 20%;
+		transform: translateX(-50%) scale(.7);
+		}
+
+		/*@mixin atLarge{
+		transform:scale(1.4);
+		}*/
+	}
+
+	&__menu-content{
+		margin: 40px;
+		position: relative;
+		display: none;
+
+		@mixin atMedium{
+			display: block;
+			text-align: right;
+		}
+	}
+}

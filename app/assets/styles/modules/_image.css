@@ -1,0 +1,16 @@
+.image{
+	&--center{
+		margin: 0 auto;
+		display: block;
+	}
+
+	&--gutter{
+
+		padding: .5rem;
+
+		@mixin atMedium{
+			padding: 2rem;
+		}
+		
+	}
+}

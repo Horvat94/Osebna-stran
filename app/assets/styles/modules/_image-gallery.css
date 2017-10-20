@@ -1,0 +1,157 @@
+.image-gallery{
+
+	&__next{
+		height: 100%;
+		line-height: 100%;
+
+		i{
+			font-size: 4.25rem;
+			cursor: pointer;
+			position: absolute;
+			top: 100px;
+			right: -15px;
+			text-shadow: black 0 0 4px;
+
+			@mixin atLarge{
+				font-size: 4.25rem;
+				cursor: pointer;
+				position: relative;
+				top: 390px;
+				right: -4px;
+				text-shadow: black 0 0 4px;
+			}
+		}
+	}
+
+	&__next:hover{
+		color: orange;
+		transition: color .3s;
+		cursor: pointer;
+	}
+
+	&__prew{
+		height: 100%;
+		i{
+			font-size: 4.25rem;
+			cursor: pointer;
+			position: absolute;
+			top: 100px;
+			left: -15px;
+			text-shadow: black 0 0 4px;
+
+			@mixin atLarge{
+				font-size: 4.25rem;
+				cursor: pointer;
+				position: relative;
+				top: 390px;
+				right: -10px;
+				left: 15px;
+				text-shadow: black 0 0 4px;
+			}
+		}
+		
+	}
+
+	&__prew:hover{
+		color: orange;
+		transition: color .3s;
+		cursor: pointer;
+	}
+
+	&__block{
+		/*background-color: gray;*/
+		height: 100%;
+	}
+
+	&__object{
+		position: absolute;
+		width: 80%;
+		left: 10%;
+		
+
+		@mixin atLarge{
+			position: relative;
+			background-color: grey;
+			height: 45%;
+			width: 45%;
+			left: 0;
+			margin: 2.5%;
+			float: right;		
+		}
+		
+		img{
+			width: auto;
+			height: 300px;
+			border-radius: 10px;
+			object-fit: cover;/*poravna sliko*/
+
+			@mixin atLarge{
+				width: auto;
+				height: 100%;
+				border-radius: 10px;
+			}
+		}
+	}
+
+&__info-img{
+			position: absolute;
+			background-color: rgba(255, 255, 255,0.6);
+			width: 100%;
+			height: 150px;
+			top: 135px;
+			box-shadow: 0 0 1px 1px #888888;
+
+			@mixin atLarge{
+				position: absolute;
+				background-color: rgba(255, 255, 255,0.6);
+				width: 100%;
+				height: 150px;
+				top: 240px;
+				box-shadow: 0 0 1px 1px #888888;
+			}
+
+			h2{
+				margin:0;
+				font-size: 1.25rem;
+				font-weight: 500;
+				text-align: center;
+				padding: 4px;
+				text-shadow: 1px 1px 2px black;
+
+				@mixin atLarge{
+					margin:0;
+					font-size: 1.25rem;
+					font-weight: 500;
+					text-align: center;
+					padding: 5px;
+					text-shadow: 1px 1px 2px black;
+				}
+				
+			}
+
+			p{
+				text-align: left;
+				font-weight: 300;
+				font-size: .9rem;
+				margin: 0;
+				padding: 5px;
+				color: #000;
+				line-height: 18px;
+
+				@mixin atLarge{
+					text-align: center;
+					font-weight: 300;
+					margin: 0;
+					padding: 5px;
+					color: #000;
+					text-decoration: none;
+					line-height: 20px;
+				}
+			}
+
+
+		}
+
+	
+
+}

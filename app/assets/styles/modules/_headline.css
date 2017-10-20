@@ -1,0 +1,21 @@
+.headline{
+	margin: 0 0 3rem 0; 
+	font-size: 2.5rem;
+	font-weight: 300;
+	text-align: center;
+
+	@mixin atMedium{
+		margin: 0 0 5rem 0; 
+		font-size: 4rem;
+	}
+	
+
+	&--colour-light{
+		color: #fff;
+	}
+
+	&--colour-dark{
+		color: #000;
+	}
+
+}

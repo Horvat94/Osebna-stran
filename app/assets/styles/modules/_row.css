@@ -1,0 +1,51 @@
+.row{
+	@mixin clearfix;
+
+	@mixin atMedium{
+
+			&__medium-5{
+			float: left;
+			width: 41.66%;
+		}
+
+		&__medium-7{
+			float: left;
+			width: 58.33%;
+		}
+
+		&__medium-6{
+			float: left;
+			width: 50%;
+		}
+
+		&__medium-4{
+			float: left;
+			width: 33.33%;
+		}
+
+		&__medium-8{
+			float: left;
+			width: 66.66%;
+		}
+
+		&__medium-1{
+			float: left;
+			width: 8.33%;
+		}
+
+		&__medium-10{
+			float: left;
+			width: 83.33%;
+		}
+
+		&__odmik{
+			margin-right: -40px;
+		}
+
+		&__odmik-small{
+			margin-right: -20px;
+		}
+	}
+
+	
+}

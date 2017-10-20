@@ -1,0 +1,70 @@
+.list-link{
+	ul{
+	
+		padding: 0;
+
+		@mixin atMedium{
+			margin: 0 auto;
+		}
+
+		@mixin atLarge{
+			margin: 0 auto 0 auto;
+		}
+	}
+	li{
+		list-style-type: none;
+		line-height: .2rem;
+		overflow:visible;
+		
+
+		@mixin atMedium{
+			list-style-type: none;
+			line-height: 1rem;
+			overflow:visible;
+		}
+	}
+
+	a{
+		font-size: 1.1rem;
+		
+		color: #000;
+		text-decoration: none;
+		padding-bottom: 2rem;
+		text-align: center;
+		display: block;
+	
+
+		@mixin atLarge{
+			font-size: 1.3rem;
+			display: inline;
+			border-bottom: solid 1px #222;
+			padding-bottom: 1rem;
+		}
+	}
+
+	a:hover, i:hover{
+		color: orange;
+		border-color: orange;
+		transition: all .3s;
+		cursor: pointer;
+	}
+
+	i{
+		color: #222;
+		position: relative;
+		font-size: 3rem;
+		padding: 20px 30px 20px 10px;
+		display: block;
+		margin: 0 auto;
+		transform: translateX(45%);
+
+		@mixin atLarge{
+			font-size: 5rem;
+			padding: 20px 30px 40px 30px;
+			top:20px;
+			display: inline-block;
+			transform: translateX(0);
+		}
+	}
+
+}

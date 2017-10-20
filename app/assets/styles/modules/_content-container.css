@@ -1,0 +1,16 @@
+.content-container{
+	p{
+		font-weight: 400;
+		font-size: 1rem;
+		line-height: 2rem;
+		letter-spacing: .1rem;
+		color: #000;
+
+		@mixin atMedium{
+			font-weight: 400;
+			font-size: 1.5rem;
+			line-height: 3.0rem;
+			letter-spacing: .1rem;
+		}
+	}
+}

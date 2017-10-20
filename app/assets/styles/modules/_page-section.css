@@ -1,0 +1,18 @@
+.page-section{
+	padding: 4rem 0;
+	width: 100%;
+
+	@mixin atMedium{
+		padding: 8rem 0;
+		width: 100%;
+	}
+
+&--white{
+	background-color: #fff;
+}
+
+&--portfolio{
+	background-color: #eee;
+}
+
+}

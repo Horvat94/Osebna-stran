@@ -1,0 +1,19 @@
+
+/*Do not edit modules/_sprite directly as it is generated automaticly by Gulp, instead edit templates/sprite !*/
+{{#shapes}}
+	{{#first}}/*to omogoča, da se bo izvedel samo enkrat !!sprite spremenljivka se lahko dostopa samo v shapes*/
+		.icon{
+			background-image: url("../../assets/images/sprites/{{{sprite}}}");
+		}
+
+		.no-svg .icon{
+			background-image: url("../../assets/images/sprites/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}");
+		}
+	{{/first}}
+
+	.icon--{{base}}{
+		width: {{width.outer}}px;
+		height: {{height.outer}}px;
+		background-position: {{position.relative.xy}};
+	}
+{{/shapes}}

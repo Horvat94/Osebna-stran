@@ -1,0 +1,119 @@
+.gallery{
+	height: gggg;
+	width: 100%;
+	position: relative;
+
+	li{
+		list-style-type: none;
+		display: inline;
+		padding-right: 10px;
+	}
+
+	ul{
+		margin:0;
+		padding:0;
+		display: inline-block;
+	}
+
+	&__btn-list{
+		position: absolute;
+		top: -15%;
+		left: 50%;
+		transform: translateX(-50%);
+		
+
+		@mixin atLarge{
+			/*top: 400px;
+			right: 200px;
+			left: -50%;
+			bottom: 500px;*/
+			top: 0;
+			right: -600px;
+			transform: rotate(-90deg);
+		}
+	}
+
+	&__btn{
+		font-weight: 300;
+		font-size: 1rem;
+		background-color: #444;
+		border-top-right-radius: 10px;
+		border-top-left-radius: 10px;
+		padding: 5px 10px;
+		box-shadow: 0 0 1px 1px #888888;
+		line-height: 2rem;
+
+
+		@mixin atLarge{
+			line-height: 0;
+			font-size: 24px;
+			border-top-right-radius: 10px;
+			border-top-left-radius: 10px;
+			padding: 10px 20px;
+		}
+	}
+
+	&__btn:hover{
+		cursor: pointer;
+		background-color: orange;
+		color: black;
+		transition: background-color .3s, color .3s;
+	}
+
+	
+		&__btn--open{
+			@mixin atLarge{
+				position: relative;
+				bottom: 1180px;
+			}	
+		}
+	
+	&__content{
+		background-color: #eee;
+		margin-top: 50%;
+
+
+		@mixin atLarge{
+			margin-top: 0;
+			position: absolute;
+			left: 35px;
+			width: 99%;
+			height: 100%;
+			border: solid rgba(153, 153, 153, 0.4) 4px;
+		}
+	}
+
+	&__content--hidden{
+		right: -99999px;
+		visibility: hidden;
+	}
+
+	&__block{
+		width: 100%;
+		
+		@mixin atLarge{
+			width: 50%; 
+			height: 100%;
+		}
+	}
+
+	&__text{
+		font-weight: 300;
+		font-size: 1rem;
+		line-height: 1.6rem;
+		letter-spacing: .1rem;
+		color: #000;
+		padding: 10px;
+		position: relative;
+		top: 300px;
+
+
+		@mixin atLarge{
+			position: none;
+			top: 0;
+			font-size: 1.3rem;
+			line-height: 2.5rem;
+			padding: 40px 70px 40px 40px;
+		}
+	}
+}

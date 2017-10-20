@@ -1,0 +1,82 @@
+.form{
+	
+	
+	height: 100%;
+	border-bottom: solid #222 1px;
+	padding-bottom: 4rem;
+
+	@mixin atMedium{
+		border-right: solid #222 1px;
+		border-bottom: none;
+		padding-right: 40px;
+	}
+
+	&__input{
+		padding: 5px;
+		margin: 10px 0 10px 0;
+		border: solid #555 2px;
+		border-radius: 5px;
+		width: 100%;
+		height: 40px;
+
+		@mixin atMedium{
+			padding: 5px;
+			margin: 10px;
+			height: 40px;
+		}
+	}
+
+	/*& input[type="text"], & textarea{
+		padding: 5px;
+		margin: 10px;
+		border: solid #222 2px;
+		border-radius: 5px;
+		width: 100%;
+		height: 40px;
+		max-height: 700px;
+	}*/
+
+	&__btn{
+		color: #666;
+		padding: 10px 20px 10px 20px;
+		margin: 10px auto 0 50%;
+		transform: translateX(-50%);
+		background-color: #fff;
+		border: solid #555 2px;
+		border-radius: 5px;
+	}
+
+	&__btn:hover{
+		color: orange;
+		border-color: orange;
+		cursor: pointer;
+	}
+
+	&__textarea{
+		height: 100px;
+
+		@mixin atSmall{
+			height: 200px;
+		}
+
+		@mixin atMedium{
+			height: 300px;
+		}
+	}
+
+	&__textarea:focus, &__input:focus{
+		border-color: orange;
+		transition: all .3s ease-in-out;
+	}
+
+/*	& input[type="submit"]{
+		padding: 10px 20px 10px 20px;
+		margin: 10px auto 0 50%;
+		transform: translateX(-50%);
+		background-color: #fff;
+		border: solid #222 2px;
+		border-radius: 5px;
+
+	}*/
+
+}

@@ -1,0 +1,129 @@
+.footer{
+	padding: 3rem 0 2rem 0;
+	width: 100%;
+
+	&__text{
+		text-align: center;
+		padding-top: 1rem;
+		font-size: 1rem;
+		font-weight: 300;
+
+		@mixin atMedium{
+			text-align: center;
+			padding-top: 50px;
+			font-size: 1.4rem;
+			margin:0;
+		}
+
+		&:hover{
+			text-shadow: orange 0 0 1px;
+			transition: text-shadow .3s;
+		}
+		
+	}
+
+	&__cms{
+		text-decoration: none;
+		color: #333;
+
+		&:hover{
+			color: #777;
+			transition: color .3s;
+		}
+
+	}
+
+	&__nav-main{
+		ul{
+			margin: 0;
+			padding: 0;
+
+		}
+
+		li{
+			list-style-type: none;
+			display: inline-block;
+		}
+
+		a{
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+
+	&__social-links{
+		
+		padding: 0 0 1rem 0;
+		text-align: center;
+
+		@mixin atMedium{
+			padding: 0 0 1rem 0;
+		}
+
+		li{
+			padding: 0px 10px 10px 10px;
+		}
+
+		i{
+			font-size: 3.3rem;
+			color: #777;
+			&:hover{
+				cursor: pointer;
+			}
+		}
+
+		&--fb:hover{
+			color: #3b5998;
+			transition: color .3s;
+		}
+
+		&--yt:hover{
+			color: #ff0000;
+			transition: color .3s;
+		}
+
+		&--lin:hover{
+			color: #007bb5;
+			transition: color .3s;
+		}
+	}
+
+	&__nav-links{
+		padding: 0 0 1rem 0;
+		text-align: center;
+		border-bottom: solid 1px #fff;
+		margin-bottom: 2rem;
+
+	@mixin atMedium{
+		padding: 0 0 2rem 4rem;
+		text-align: left;
+		margin: 0;
+		border: none;
+	}
+
+		li{
+			padding: 10px;
+		}
+
+		a{
+			font-size: 1rem;
+			font-weight: 300;
+			color: #777;
+			border-bottom: solid 1px #777;
+
+			@mixin atMedium{
+				font-size: 1.3rem;
+				font-weight: 300;
+				color: #777;
+				border-bottom: solid 1px #777;
+			}
+
+			&:hover{
+				color: orange;
+				border-color: orange;
+				transition: all .3s;
+			}
+		}
+	}
+
+}

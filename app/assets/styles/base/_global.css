@@ -1,0 +1,21 @@
+
+/*razmerje slike*/
+img{
+	max-width: 100%;
+	height: auto;
+}
+/*globalna pisava*/
+body{
+	font-family: Lato, 'Roboto';
+	color: #fff;
+	background-color: #222;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+html{
+	height: 100%;
+}
+

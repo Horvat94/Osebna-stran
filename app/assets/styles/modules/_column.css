@@ -1,0 +1,14 @@
+.column{
+
+	@mixin clearfix;
+
+	&--medium-5{
+		float: left;
+		width: 41.66%;
+	}
+
+	&--medium-7{
+		float: left;
+		width: 58.33;
+	}
+}
