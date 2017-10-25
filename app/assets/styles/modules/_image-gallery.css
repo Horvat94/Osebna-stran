@@ -31,6 +31,7 @@
 
 	&__prew{
 		height: 100%;
+		outline: none;
 		i{
 			font-size: 4.25rem;
 			cursor: pointer;
@@ -81,7 +82,8 @@
 		
 		img{
 			width: auto;
-			height: 300px;
+			min-height: 300px;
+			height: auto;
 			border-radius: 10px;
 			object-fit: cover;/*poravna sliko*/
 
@@ -97,9 +99,9 @@
 			position: absolute;
 			background-color: rgba(255, 255, 255,0.6);
 			width: 100%;
-			height: 150px;
+			height: auto;
 			top: 135px;
-			box-shadow: 0 0 1px 1px #888888;
+			box-shadow: 0 0 1px 1px #888888;	
 
 			@mixin atLarge{
 				position: absolute;

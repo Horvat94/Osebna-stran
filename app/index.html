@@ -6,24 +6,37 @@
 	<title>Horvat Tadej personal site</title>
 	<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" type="text/css" href="temp/styles/styles.css">
+
+<script type="text/javascript" src="/temp/scripts/Vendor.js"></script>
 </head>
 
 <body>
 
-	<header class="site-header">
+	<header class="site-header site-header--sticky"><!-- site-header- -sticky-->
 
 		<div class="wrapper">
 
 			<div class="site-header__logo">
 				<img src="./assets/images/logo_TH_invert.svg">
 			</div>
-			<div class="site-header__menu-content">
-				<nav class="primary-nav">
+
+
+
+			<div class="site-header__drop-down-menu">
+				<div class="site-header__drop-down-menu--line-top"></div>
+				<div class="site-header__drop-down-menu--line-middle"></div>
+				<div class="site-header__drop-down-menu--line-bottom"></div>
+			</div>
+
+
+
+			<div class="site-header__menu-content site-header__menu-content--hidden">
+				<nav class="primary-nav"><!--  sticky-nav-->
 					<ul>
-						<li><a href="#">Biografija</a></li>
-						<li><a href="#">Portfolio</a></li>
-						<li><a href="#">Objave</a></li>
-						<li><a href="#">Kontakt</a></li>
+						<li><a id="bio-link" href="#bio">Biografija</a></li>
+						<li><a id="port-link"  href="#port">Portfolio</a></li>
+						<li><a id="post-link"  href="#">Objave</a></li>
+						<li><a id="cont-link"  href="#cont">Kontakt</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -32,12 +45,12 @@
 		
 	</header>
 	
-		<div class="large-hero">
+		<div class="large-hero" data-link="#break">
 			
 			<picture>
 			    <source srcset="./assets/images/hero--large.png 1920w, ./assets/images/hero--large-hi-dpi.png 3840w" media="(min-width: 1380px)">
     			<source srcset="./assets/images/hero--medium.png 1380w,./assets/images/hero--medium-hi-dpi.png 2760w" media="(min-width: 990px)">
-    			<source srcset="./assets/images/hero--small.png 990w, ./assets/images/hero--small-hi-dpi.png" media="(min-width: 650px )">
+    			<source srcset="./assets/images/hero--small.png 990w, ./assets/images/hero--small-hi-dpi.png" media="(min-width: 440px )">
 				<img srcset="./assets/images/hero--smaller.png 640w, ./assets/images/hero--smaller-hi-dpi.png 1280w" alt="Slika Horvat Tadej" class="large-hero__image">
 
 			</picture>
@@ -55,8 +68,7 @@
 			
 		</div>
 
-
-<div class="page-section page-section--white">
+<div id="bio"  data-link="#bio-link" class="page-section page-section--white">
 
 	<div class="wrapper">
 
@@ -88,7 +100,7 @@
 
 
 
-	<div class="page-section page-section--portfolio">
+	<div id="port" data-link="#port-link" class="page-section page-section--portfolio">
 
 		<h2 class="headline headline--colour-dark">Portfolio</h2>
 
@@ -182,7 +194,7 @@
 
 
 
-	<div class="page-section page-section--white">
+<div id="cont" data-link="#cont-link" class="page-section page-section--white">
 <h2 class="headline headline--colour-dark">Kontakt</h2>
 
 <div class="row">
@@ -230,9 +242,9 @@
 			<div class="footer__nav-links row__medium-8">
 				<div class="footer__nav-main">
 					<ul>
-						<li><a href="">Kontakt</a></li>
-						<li><a href="">Biografia</a></li>
-						<li><a href="">Portfolio</a></li>
+						<li><a class="is-current-link" href="#cont">Kontakt</a></li>
+						<li><a href="#bio">Biografia</a></li>
+						<li><a href="#port">Portfolio</a></li>
 						<li><a href="">Post</a></li>
 					</ul>
 				</div>
@@ -241,9 +253,9 @@
 			<div class="footer__social-links row__medium-4">
 				<div class="footer__nav-main">
 					<ul>
-						<li ><ahref=""><i class="ion-social-facebook-outline footer__social-links--fb"></i></a></li>
-						<li ><ahref=""><i class="ion-social-linkedin-outline footer__social-links--lin"></i></a></li>
-						<li><ahref=""><i class="ion-social-youtube-outline footer__social-links--yt"></i></a></li>
+						<li ><a href=""><i class="ion-social-facebook-outline footer__social-links--fb"></i></a></li>
+						<li ><a href=""><i class="ion-social-linkedin-outline footer__social-links--lin"></i></a></li>
+						<li><a href=""><i class="ion-social-youtube-outline footer__social-links--yt"></i></a></li>
 					</ul>
 				</div>
 			</div>
@@ -260,7 +272,7 @@
 
 
 
-
+<script type="text/javascript" src="/temp/scripts/App.js"></script>
 
 </body>
 </html>

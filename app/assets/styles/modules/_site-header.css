@@ -10,34 +10,144 @@
 		padding: 1rem 0;
 	}
 
+
 	&__logo{
 		position: absolute;
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%) scale(.5);
 		transform-origin: top;
+		transition: all .3s;
 		/*
 		left: 50%;
 		transform: translateX(-50%) scale(.5);*/
 
 		@mixin atMedium{
-		left: 20%;
-		transform: translateX(-50%) scale(.7);
+			left: 20%;
+			transform: translateX(-50%) scale(.7);
 		}
+
+		&--sticky{
+			@mixin atMedium{
+				transform: scale(.5);
+				top: -10px;
+				left: 0;
+			}
+		}
+
+		&--smaller{/*logo za meni manjših naprav js activate*/
+			left: 50px;
+			top: -10px;
+			transition: all .3s;
+		}
+
+
 
 		/*@mixin atLarge{
 		transform:scale(1.4);
 		}*/
 	}
 
-	&__menu-content{
-		margin: 40px;
-		position: relative;
-		display: none;
+
+
+	&__drop-down-menu{/*meni za manjše naprave js activate*/
+		width: 30px;
+		height: 30px;
+
+		position: absolute;
+		top: 20px;
+		right: 30px;
+
+		&--line-top{
+			background-color: white;
+			padding: 2px 18px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform-origin:  0 0;
+			transition: all .3s ease-out;
+		}
+
+		&--line-middle{
+			background-color: white;
+			padding: 2px 18px;
+			position: absolute;
+			top: 13px;
+			right: 0;
+			transform-origin: 0 50%;
+			transition: all .3s ease-out;
+		}
+
+		&--line-bottom{
+			background-color: white;
+			padding: 2px 18px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			transform-origin: 0 100%;
+			transition: all .3s ease-out;
+		}
 
 		@mixin atMedium{
+			display: none;
+		}
+	}
+/*meni z mahne naprave*/
+	&__drop-down-menu--close{
+
+		.site-header__drop-down-menu--line-top{
+			transform: rotate(45deg) scale(1.1);
+		}
+
+		.site-header__drop-down-menu--line-middle{
+			transform: scaleX(0);
+			opacity: 0;
+		}
+
+		.site-header__drop-down-menu--line-bottom{
+			transform: rotate(-45deg) scaleX(1.1);
+		}
+
+	}
+/*vsebina menija (povezave)*/
+	&__menu-content{
+
+		top: 80px;
+		left: 50%;
+		transform: translateX(-50%);
+		position: absolute;
+		height: auto;
+		transition: all .3s;
+		opacity: 0;
+		z-index: -10;
+	
+		@mixin atMedium{
+			background-color: rgba(0,0,0,0);
+			top: 0;
+			margin: 40px;
+			position: relative;
 			display: block;
 			text-align: right;
+			opacity: 1;
+			z-index: 10;
 		}
+
+		&--background-dark{
+			background-color: rgba(23, 23, 23, .5);
+		}
+
+		&--vissible{
+			opacity: 1;
+			z-index: 10;
+			transition: all .3s ease-out;
+		}
+
+	}
+
+	&--sticky{/* od hero naprej js activate*/
+		position: fixed;
+		background-color: rgba(23, 23, 23, .5);
+		height: 80px;
+		transition: all .2s ease-out;
 	}
 }
