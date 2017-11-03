@@ -31,13 +31,13 @@ class StickyHeader{
 			handler: function(direction){
 				if( direction == "down"){
 					mainCall.siteHeader.addClass("site-header--sticky");
-					mainCall.contentNavMobile.addClass("site-header__menu-content--background-dark");
+					//mainCall.contentNavMobile.addClass("site-header__menu-content--background-dark");
 					mainCall.logoHeader.addClass("site-header__logo--sticky");
 					mainCall.navHeader.addClass("primary-nav--sticky");
 					
 				}else{
 					mainCall.siteHeader.removeClass("site-header--sticky");
-					mainCall.contentNavMobile.removeClass("site-header__menu-content--background-dark");
+					//mainCall.contentNavMobile.removeClass("site-header__menu-content--background-dark");
 					mainCall.logoHeader.removeClass("site-header__logo--sticky");
 					mainCall.navHeader.removeClass("primary-nav--sticky");
 				}

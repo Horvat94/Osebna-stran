@@ -846,7 +846,6 @@ html{
 	position: relative;
 }
 .gallery li{
-
 		list-style-type: none;
 		display: inline;
 		padding-right: 10px;
@@ -854,8 +853,6 @@ html{
 .gallery ul{
 		margin:0;
 		padding:0;
-
-
 	}
 .gallery__btn-list{	
 		position: absolute;
